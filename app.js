@@ -1,26 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-/* const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "helloworld from react inside the dom !"
+
+//React Element
+const jsxHeading = (
+  <h1 id="heading" tabIndex="5">
+    This is JSX heading
+  </h1>
 );
-console.log(heading);
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
 
- */
-const heading1 = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "spring heaven"),
-    React.createElement("h2", {}, "i am h2"),
-  ]),
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "parcell is a beast"),
-    React.createElement("h2", {}, "i am h2"),
-  ]),
-]);
-console.log(heading1);
+//React Component
+//class based component  : class based react component are old way of writing code
+//fucntional react component : new way of writing code
 
+const HeadingComponent = () => {
+  return <h1>Spring Heaven Functional Component</h1>;
+};
+
+const Title = () => <h1>Spring Heaven Solutions Pvt Ltd</h1>;
+
+const HeadingComponent1 = () => (
+  <div id="container">
+    {jsxHeading}
+    <h1 className="heading">Spring heaven Functional Component</h1>
+  </div>
+);
+
+console.log(jsxHeading);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading1);
+root.render(<HeadingComponent1 />);
