@@ -25,3 +25,34 @@ Everyting below is done by parcel
 - HTTPs
 - Tree Shaking - remove unused code for you
 - Different dev and prod bundles
+
+#Food ordering APP Spring Heaven : Planning Phase
+/_
+Header
+Logo
+Nav-items
+Body
+--search
+--restaurantContainer
+--RestaurantCard
+-- image
+-- name of the restaurant
+-- star rating
+-- cuisines
+-- name of res, Star , Rating ,delivery tinme
+Footer
+--copyright
+--Links
+--Addres  
+ --contact
+_/
+
+- Default Export/Import
+
+export default component
+import component from "path"
+
+-Named Export/Import
+
+export const Component;
+import {Component} from "path"
