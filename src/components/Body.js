@@ -7,7 +7,8 @@ const Body = () => {
   const [listofRestaurants, setListOfRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  /*  useEffect(() => {
+  useEffect(() => {
+    console.log("useeffect called");
     fetchData();
   }, []);
 
@@ -19,8 +20,10 @@ const Body = () => {
 
     console.log(json);
     //Optional Chaining
-    setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-   };*/
+    //  setListOfRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+  };
+
+  console.log("Body Rendered");
 
   return listofRestaurants.length == 0 ? (
     <div className="body">
