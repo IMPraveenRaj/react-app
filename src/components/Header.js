@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [btnNameReact, setBtnNameReact] = useState("Login");
 
   console.log("Header Rendered");
 
-  //if no dependency array
+  //if no dependency array =====> useEffect is called on every Render
+  //if dependency array is empty  = [] => use effect is called on initial render(just once)
+  //if dependecny array is  [btnNameReact]= use effect is called on every udpate of the btnNameReact
   useEffect(() => {
     console.log("useEffect called");
   }, []);
@@ -21,13 +24,20 @@ const Header = () => {
       <div className="nav-items">
         <ul>
           <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
+          <li>
+            {/* <a href="/about">About us</a> */}
+            <Link to="/about">About us</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact Us</Link>
+          </li>
           <li>Cart</li>
           <button
             className="login"
             onClick={() => {
-              setBtnNameReact("Logout");
+              btnNameReact == "Login"
+                ? setBtnNameReact("Logout")
+                : setBtnNameReact("Login");
             }}
           >
             {btnNameReact}
