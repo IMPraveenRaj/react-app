@@ -56,3 +56,5 @@ import component from "path"
 
 export const Component;
 import {Component} from "path"
+
+//optimizing our app
